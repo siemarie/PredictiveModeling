@@ -4,6 +4,7 @@ author: "Jessie Lamb"
 date: "Sept. 26, 2015"
 output: html_document
 ---
+# Modeling Weight Lifting Form with Accelerometer Readings
 
 ## Executive Summary
 This analysis explores the Weight Lifting Exercises Dataset (<http://groupware.les.inf.puc-rio.br/har>) from the Human Activity Recognition study.
@@ -70,7 +71,7 @@ The test set is then loaded and the prediction model used to predict *classe*, t
 
 ```{r}
 dataSet2<<-read.csv("https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv");
-predictClasse<-predict(modFit,newdata=dataSet2)
+predictClasse<-predict(modelFit,newdata=dataSet2)
 dataSet2$classe<-predictClasse
 dataSet2
 ```
